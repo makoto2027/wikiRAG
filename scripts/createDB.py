@@ -7,16 +7,16 @@ import json
 
 from functions import get_text, chunk_text, convertDocuments
 
-with open("code/RAG/config.json", "r") as f:
+with open("scripts/config.json", "r") as f:
     config = json.load(f)
 
 
-storePath = "code/RAG/chroma_data_300"
+storePath = "DB/chroma_data_200"
 embeddings = AzureOpenAIEmbeddings(
     azure_endpoint=config["OPENAI_API_BASE"],
     openai_api_key=config["OPENAI_API_KEY"],
     deployment='text-embedding-ada-002', # 使うモデル
-    chunk_size=300
+    chunk_size=200
 )
 
 vectorstore = Chroma(
@@ -25,7 +25,7 @@ vectorstore = Chroma(
     embedding_function=embeddings
 )
 
-f = open('code/RAG/text/urls.txt', 'r')
+f = open('DB/text/urls.txt', 'r')
 urls = [url.strip() for url in f.readlines()]
 f.close()
 
@@ -35,7 +35,7 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.set_page_load_timeout(300)
 
 notGetUrl = []
-saveFilePath = "code/RAG/text/failedUrl.txt"
+saveFilePath = "DB/text/failedUrl.txt"
 
 
 # 進捗バーの初期化

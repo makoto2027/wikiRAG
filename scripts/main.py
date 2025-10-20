@@ -3,7 +3,7 @@ from functions import searchChunk, Answer_question
 import streamlit as st
 
 
-DATABASE_PATH = "code/RAG/chroma_data"
+DATABASE_PATH = "DB/chroma_data_200"
 
 # Streamlit UI
 # Streamlit ページの構築

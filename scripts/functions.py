@@ -12,7 +12,7 @@ from langchain_openai import AzureChatOpenAI
 from langchain.prompts import PromptTemplate
 import json
 
-with open("code/RAG/config.json", "r") as f:
+with open("scripts/config.json", "r") as f:
     config = json.load(f)
 
 

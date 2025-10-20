@@ -2,7 +2,7 @@ from functions import get_urls
 import csv
 
 BaseUrl = "https://wikiwiki.jp/syanhuro/" # Wikiのホームページ
-saveFilePath = "code/RAG/urls.txt"
+saveFilePath = "DB/text/urls.txt"
 
 urls = [BaseUrl]
 
