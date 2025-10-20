@@ -12,35 +12,11 @@ python -m venv .venv
 
 ### 1-2. 仮想環境の起動／終了
 
-**macOS / Linux（bash/zsh）**
 ```bash
 # 起動
 source .venv/bin/activate
 
 # 終了
-deactivate
-```
-
-**Windows（PowerShell）**
-```powershell
-# 起動
-.\.venv\Scripts\Activate.ps1
-
-# 終了
-deactivate
-```
-> PowerShell の実行ポリシーで起動できない場合（権限が許される範囲で一時的に回避）  
-> ```powershell
-> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-> .\.venv\Scripts\Activate.ps1
-> ```
-
-**Windows（コマンドプロンプト/CMD）**
-```cmd
-:: 起動
-.\.venv\Scriptsctivate.bat
-
-:: 終了
 deactivate
 ```
 
