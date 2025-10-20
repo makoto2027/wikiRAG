@@ -1,0 +1,13 @@
+streamlit
+opencv-python
+selenium
+streamlit
+sentence-transformers
+faiss-cpu
+numpy
+beautifulsoup4
+langchain
+langchain-community
+langchain-openai
+langchain-chroma
+openai
